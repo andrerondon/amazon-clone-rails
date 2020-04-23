@@ -1,0 +1,67 @@
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="/">Home</a>
+  <a href="/contact_us">Contact</a>
+  <a class="active" href="/products">Products</a>
+</div>
+
+<h1>PRODUCTS</h1>
+  <a class="active" href="/products/new">ADD A NEW PRODUCT</a>
+</div>
+
+<div class='row'>
+  <div class='col-2'>
+  </div>
+
+  <div class='col-10'>
+    <% @products.each do |product| %>
+    <%# if you pass a instance to link_to it will create the href='/questions/:id' %>
+    <a href="/products/<%= product.id %>">
+        <h4> <%= product.id %> | <%= product.title %></h4>
+    </a>
+    <% end %>
+
+    <%# link_to just creates a `a tag` with the correct href. the below is equivalent to the above code %>
+    <% if false %>
+      <% @products.each do |product| %>
+        <a href="/products/<%= product.id %>">
+          <li class='list-group-item'>
+            <p><%= product.id %> <%= product.title%></p>
+          </li>
+        </a>
+      <% end %>
+    <% end %>
+  </div>
+</div>
