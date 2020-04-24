@@ -4,15 +4,14 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :description
       t.integer :price
-
       t.timestamps
     end
   end
 
 
-  if t.string.capitalize?
-    t.string.capitalize
-  end
+  # if t.string.capitalize?
+  #   t.string.capitalize
+  # end
 
 end
 
