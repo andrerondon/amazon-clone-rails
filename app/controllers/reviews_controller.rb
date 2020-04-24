@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
     def create
         @product = Product.find(params[:product_id])
         @review = Review.new review_params
-        @review.produdct = @product
+        @review.product = @product
         if @review.save
             redirect_to product_path(@product)
             

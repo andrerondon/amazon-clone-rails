@@ -23,13 +23,15 @@ class ProductsController < ApplicationController
     
     def show
       @product = Product.find(params[:id])
+      @review = Review.new
     end
 
 
     def destroy
       @product = Product.find(params[:id])
       @product.destroy
-      redirect_to product_path(@product)
+      # redirect_to product_path(@product)
+      render :new
     end
 
     def edit
@@ -39,6 +41,7 @@ class ProductsController < ApplicationController
     def update
       @product = Product.find(params[:id])
       if @product.update(params.require(:product).permit(:title, :description, :price))
+        redirect_to product_path(@product)
         
       else
         render :edit
