@@ -27,11 +27,10 @@ Rails.application.routes.draw do
   # get("products/:id/edit", to: 'products#edit', as: :edit_product)
   # patch("/products/:id", to: "products#update")
 
-  resources :products
-
-
+  resources :products do
+    resources :reviews, only: [:create, :destroy]
+  end
 end
-
 
 
 # Build a home and about pages

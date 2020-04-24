@@ -5,11 +5,11 @@ class Product < ApplicationRecord
     validates(
         :description,
         presence: { message: "must exist" },
-        length: { minimum: 10 }
+        length: { minimum: 5 }
     )
     validates(
         :price,
-        numericality: { greater_than_or_equal_to: 0, allow_blank: true }
+        numericality: { greater_than_or_equal_to: 0, allow_blank: false }
     )
 end
 
