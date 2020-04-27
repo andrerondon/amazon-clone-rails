@@ -30,3 +30,16 @@ puts "Created #{Product.count} products"
 puts "Created #{Review.count} reviews"
 # puts Cowsay.say("Generated #{Product.count} products", :frogs)
 # puts Cowsay.say("Generated #{Review.count} reviews", :tux)
+
+
+
+# class Change < ActiveRecord::Migration[6.0]
+
+#   def up 
+#     change_column :products, :price, :float
+#   end
+
+#   def down 
+#     change_column :products, :price, :float
+#   end
+# end
