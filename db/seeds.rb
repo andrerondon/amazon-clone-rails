@@ -26,10 +26,10 @@ Product.destroy_all
     end
 end
 
-puts "Created #{Product.count} products"
-puts "Created #{Review.count} reviews"
-# puts Cowsay.say("Generated #{Product.count} products", :frogs)
-# puts Cowsay.say("Generated #{Review.count} reviews", :tux)
+# puts "Created #{Product.count} products"
+# puts "Created #{Review.count} reviews"
+puts Cowsay.say("Generated #{Product.count} products", :frogs)
+puts Cowsay.say("Generated #{Review.count} reviews", :tux)
 
 
 
