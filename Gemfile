@@ -42,7 +42,9 @@ group :development do
   gem 'cowsay'
   gem 'pry'
   gem 'pry-rails'
-
+  gem 'awesome_print'
+  gem 'interactive_editor'
+  gem 'hirb'
 
 end
 
