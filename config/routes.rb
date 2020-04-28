@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+  get 'sessions/create'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   get("/", to: "welcome#root") 
@@ -26,6 +28,8 @@ Rails.application.routes.draw do
   # delete("products/:id", to: 'products#destroy')
   # get("products/:id/edit", to: 'products#edit', as: :edit_product)
   # patch("/products/:id", to: "products#update")
+
+  resource :session, only: [:new, :create, :destroy]
 
   resources :products do
     resources :reviews, only: [:create, :destroy]
