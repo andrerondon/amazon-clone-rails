@@ -59,7 +59,7 @@
         <h3> Rating: <% review.rating %> </h3>
         <p> <% review.body %> </p>
         <% link_to 'Delete',
-          review_path(review),
+          product_review_path(@product, review),
           class: "btn btn-danger brn-sm",
               method: :delete, 
               data: {
